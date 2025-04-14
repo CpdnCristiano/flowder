@@ -14,7 +14,7 @@ class DownloaderUtils {
   /// Please use [ProgressImplementation] when called
   final ProgressInterface progress;
 
-  final String accessToken;
+  final String? accessToken;
 
   /// Dio Client for HTTP Request
   Dio? client;
@@ -36,7 +36,7 @@ class DownloaderUtils {
 
   DownloaderUtils({
     required this.progress,
-    required this.accessToken,
+    this.accessToken,
     this.client,
     required this.file,
     this.deleteOnCancel = false,
